@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SWARCH</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css')
+        }}">
+    </head>
+    <body>
+    <h1>PRODUCT</h1>
+        <form method="POST" action="/products">
+            <label for="name">Nombre:</label><br>
+            <input type="text" id="name" name="name" required><br>
+            <label for="description">Descripción:</label><br>
+            <textarea id="description" name="description"></textarea><br>
+            <button type="submit">Crear</button>
+        </form>
+        <form method="POST" action="/products/update">
+            <label for="product_id">ID del Producto:</label><br>
+            <input type="number" id="product_id" name="product_id" required><br>
+        
+            <label for="name">Nombre:</label><br>
+            <input type="text" id="name" name="name" required><br>
+            
+            <label for="description">Descripción:</label><br>
+            <textarea id="description" name="description"></textarea><br>
+            
+            <button type="submit">Modificar</button>
+        </form>
+    </body>
+</html>
